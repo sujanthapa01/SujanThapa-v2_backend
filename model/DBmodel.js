@@ -17,10 +17,9 @@ const createDBModel = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-// Create model
 const User = mongoose.model("User", createDBModel);
 
-// Handle model creation promise
+
 User.init()
   .then(() => console.log('User model created successfully'))
   .catch((error) => console.error('Error creating User model:', error));
